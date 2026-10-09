@@ -1,0 +1,12 @@
+# Meta-information about co-authors. When a name in _bibliography/papers.bib
+# matches an entry here, it is highlighted and linked.
+#
+# Keys MUST be lower cased and MUST NOT contain accents (they are matched against
+# the last names in the BibTeX entries, with possible variations).
+#
+# Example:
+# "lv":
+#   - firstname: ["Changze", "C."]
+#     url: https://example.org/changze-lv
+#
+# Only add an entry once you know the co-author's real homepage — do not guess.

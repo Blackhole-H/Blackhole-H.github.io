@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Bang Hu — Brain-Inspired Computing and Embodied Intelligence">
+  <rect width="1200" height="630" fill="#FCFBFA" />
+  <rect x="0" y="0" width="1200" height="8" fill="#1B3A6B" />
+
+  <g transform="translate(90 190)">
+    <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-weight="600" fill="#1F2328">Bang Hu</text>
+    <rect x="4" y="34" width="120" height="4" fill="#2F6F7E" />
+    <text x="0" y="98" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" fill="#4A5058" letter-spacing="0.3">Brain-Inspired Computing &amp; Embodied Intelligence</text>
+    <text x="0" y="152" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#6B7178" letter-spacing="0.3">PhD Student · College of Computer Science and Artificial Intelligence, Fudan University</text>
+  </g>
+
+  <g transform="translate(90 520)" stroke="#1B3A6B" stroke-width="2.5" fill="none" opacity="0.5">
+    <path d="M0 26 L0 -30 M18 26 L18 8 L18 -30 M36 26 L36 -30 M54 26 L54 18 L54 -30 M72 26 L72 -30" />
+    <path d="M114 26 L114 -30 M132 26 L132 -10 L132 -30 M150 26 L150 -30 M168 26 L168 -30 M186 26 L186 4 L186 -30" />
+  </g>
+
+  <line x1="90" y1="562" x2="1110" y2="562" stroke="#DCDCD7" stroke-width="1.5" />
+</svg>

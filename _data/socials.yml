@@ -1,0 +1,19 @@
+# this file contains the social media links and usernames of the author
+# the socials will be displayed in the order they are defined here
+# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
+#
+# NOTE: the key names must match the ones jekyll-socials knows. Unknown keys are
+# treated as a "custom social" and require a `logo`, so a typo here breaks the build.
+# Correct spellings used below: email, github_username, orcid_id, scholar_userid, cv_pdf.
+
+email: hub24@m.fudan.edu.cn # your academic email address
+github_username: Blackhole-H # your GitHub username
+orcid_id: 0009-0005-4274-7588 # your ORCID iD
+
+# Uncomment once you have the corresponding resource.
+# Any field left unset simply renders no button — never add a placeholder URL.
+#
+# scholar_userid: XXXXXXXXXXX # your Google Scholar user id (the `user=` value in your Scholar profile URL)
+# cv_pdf: /assets/pdf/Bang_Hu_CV.pdf # path to your CV PDF, once you add the file to assets/pdf/
+# linkedin_username: your-linkedin-username
+# x_username: your-x-username

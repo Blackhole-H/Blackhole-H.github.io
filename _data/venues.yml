@@ -1,0 +1,7 @@
+# Venue abbreviations used by the `abbr` field in _bibliography/papers.bib.
+# Each entry can carry a `url` (the short name becomes a link) and a `color`.
+# Add one entry here whenever a publication gains a real venue.
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#1b3a6b"
