@@ -165,13 +165,54 @@ git commit -m "..."
 git push origin main
 ```
 
-首次部署前只需做一次仓库设置：
+首次部署请**按这个顺序**操作（`gh-pages` 分支要先由工作流创建出来，才能被选中）：
 
 1. **Settings → Actions → General → Workflow permissions**：选 **Read and write permissions**，保存。
-2. **Settings → Pages → Build and deployment**：Source 选 **Deploy from a branch**，分支选 **gh-pages**（不是 `main`）。
+   （不设这一项，工作流无权推送 `gh-pages` 分支。）
+2. 推送一次提交，让 **Actions → Deploy site** 跑完变绿；它会自己创建并推送 `gh-pages` 分支。
+   分支不存在时，第 3 步的下拉框里选不到它。
+3. **Settings → Pages → Build and deployment**：Source 选 **Deploy from a branch**，
+   分支选 **`gh-pages`**、目录 **`/ (root)`**，保存。
+
+### ⚠️ 分支必须选 `gh-pages`，绝对不能选 `main`
+
+al-folio v1.x 的运行时（`al_folio_core` 等）是 **gem**，而 GitHub Pages 内置的
+Jekyll 构建器只认白名单里的少数插件，装不了这些 gem。所以：
+
+- ✅ 正确：构建由 `.github/workflows/deploy.yml`（GitHub Actions）完成，
+  产物推到 `gh-pages` 分支，Pages 只是**原样发布这个静态分支**。
+  仓库根目录的 `.nojekyll` 会保证 Pages 不再对 `gh-pages` 跑一次 Jekyll。
+- ❌ 错误：把 Pages 指向 `main`（源码分支），GitHub 会用自己的 Jekyll 构建源码，
+  必然报错，典型日志是：
+
+  ```
+  Run actions/jekyll-build-pages@v1
+  Warning: The github-pages gem can't satisfy your Gemfile's dependencies.
+  Error: The al_folio_core theme could not be found.
+  ```
+
+  **修复方法**：把 Pages 的分支从 `main` 改回 `gh-pages` 即可，代码不用动。
+
+另外，如果 GitHub 曾提示你创建过官方的 "Jekyll" 工作流
+（`.github/workflows/jekyll.yml` 或 `jekyll-gh-pages.yml`），请**删掉它**——
+它调用的就是上面那个内置构建器，会和本站的 `deploy.yml` 冲突。
 
 之后在 **Actions** 标签页看 "Deploy site" 工作流变绿，约 4 分钟后
-`https://blackhole-h.github.io/` 即更新。
+`https://blackhole-h.github.io/` 即更新。若 Actions 未自动触发，
+可在 Actions → Deploy site → **Run workflow** 手动跑一次。
+
+### 兜底方案：跳过 Actions，手动发布构建产物
+
+如果 Actions 因网络或其他原因始终跑不通，可以在本地把构建好的 `_site` 直接推到 `gh-pages`：
+
+```bash
+bundle exec jekyll build          # 生成 _site/
+# 把 _site 内容作为 gh-pages 分支推送（保留其中的 .nojekyll，
+# 它确保 Pages 不会再对产物跑一次 Jekyll）
+```
+
+只要 `gh-pages` 分支根目录里有 `.nojekyll`，Pages 就会原样发布这些静态文件，
+不需要任何云端构建。
 
 ---
 

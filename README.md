@@ -47,3 +47,10 @@ publishes it to the `gh-pages` branch. One-time repository setup:
 
 1. Settings → Actions → General → Workflow permissions → **Read and write permissions**
 2. Settings → Pages → Build and deployment → **Deploy from a branch** → branch **gh-pages**
+
+> ⚠️ The Pages branch must be `gh-pages`, never `main`. al-folio v1.x ships its runtime as
+> Ruby gems (`al_folio_core` and friends), which GitHub's built-in Jekyll builder cannot
+> install — pointing Pages at `main` fails with
+> `Error: The al_folio_core theme could not be found.`
+> Builds run through GitHub Actions (`deploy.yml`) instead; `.nojekyll` in the repo root
+> stops Pages from re-running Jekyll on the already-built `gh-pages` branch.

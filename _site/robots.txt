@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://blackhole-h.github.io/sitemap.xml
