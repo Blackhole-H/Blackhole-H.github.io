@@ -23,25 +23,14 @@ latest_posts:
 
 {% include site-extras.html %}
 
-I am a PhD student at the College of Computer Science and Artificial Intelligence,
-Fudan University. My research lies in brain-inspired computing and embodied
-intelligence.
+I am a Ph.D. student at the College of Computer Science and Artificial
+Intelligence, Fudan University.
 
-Much of my current work concerns efficient neural computation with
-**spiking neural networks** — models that exchange discrete events instead of
-dense values. I am interested in what such models can represent, how cheaply they
-can represent it, and where the inductive bias of spike-based computation actually
-helps. This line of work includes **SpikeSTAG**, which combines graph structural
-learning with spike-based temporal processing for multivariate time-series
-forecasting; **SpikeLite**, which keeps spiking forecasters lightweight through
-frequency-selective encoding and sparse cross-channel interaction; and
-**QuantaSpike**, which applies short-window spike-driven computation to quantized
-large language models.
+My research interests include Brain-inspired Computing, Spiking Neural Networks,
+and Embodied Intelligence. I am currently working on Long-horizon Memory for
+Embodied Agents.
 
-More recently, I have been thinking about what comes after perception: **memory**.
-An embodied agent acting over a long horizon cannot retain everything it observes,
-so the question of what is worth keeping becomes as important as how observations
-are encoded in the first place.
+Please feel free to contact me via email: hub24@m.fudan.edu.cn.
 
 ## Research Interests
 
