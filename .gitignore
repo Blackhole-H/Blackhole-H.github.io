@@ -19,3 +19,18 @@ vendor
 # Python bytecode from bin/ helper scripts
 __pycache__/
 *.pyc
+
+# al-folio upstream tooling - not part of the published site.
+# Keep these ignored so GitHub Desktop never offers to commit them again.
+.agents/
+.devcontainer/
+.gemini/
+.all-contributorsrc
+.dockerignore
+.git-blame-ignore-revs
+.gitattributes
+.lycheeignore
+.pre-commit-config.yaml
+.prettierignore
+.prettierrc
+requirements.txt
