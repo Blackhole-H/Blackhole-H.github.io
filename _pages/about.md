@@ -9,7 +9,7 @@ subtitle: >-
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to a circle
 
 selected_papers: false # the publication list below is rendered inline, so it can sit between the sections
 social: true # includes social icons at the bottom of the page
@@ -26,44 +26,36 @@ latest_posts:
 I am a Ph.D. student at the College of Computer Science and Artificial
 Intelligence, Fudan University.
 
-My research interests include Brain-inspired Computing, Spiking Neural Networks,
-and Embodied Intelligence. I am currently working on Long-horizon Memory for
-Embodied Agents.
+I have led first-author research on efficient spiking neural networks —
+SpikeSTAG, SpikeLite, and QuantaSpike — with preprints available on arXiv
+(see [Publications](/publications/)).
 
 Please feel free to contact me via email: hub24@m.fudan.edu.cn.
 
 ## Research Interests
 
-<div class="research-grid">
-  <div class="research-card">
-    <h3>Brain-Inspired Computing</h3>
-    <span class="research-card-rule"></span>
-    <p>
-      I study spiking neural networks as a substrate for efficient computation,
-      together with the representations that make them effective: temporal and
-      spatio-temporal structure, spectral decomposition, and low-timestep
-      encodings that compress information into few events.
-    </p>
-    <p>
-      This work is motivated by a simple question — how much of what a network
-      computes is actually needed, and how much of the remainder can be removed
-      before accuracy starts to matter.
-    </p>
-  </div>
-  <div class="research-card">
-    <h3>Embodied Intelligence</h3>
-    <span class="research-card-rule"></span>
-    <p>
-      I am interested in long-horizon memory for embodied agents: identifying the
-      moments in a long interaction that remain useful later, retaining them in a
-      compact form, and retrieving them when a decision depends on them.
-    </p>
-    <p>
-      I am also drawn to biological neural circuits, in particular those of the
-      <em>Drosophila</em> brain, as a source of principles for organizing
-      perception, memory, and action in small systems.
-    </p>
-  </div>
+<div class="research-card">
+  <p>
+    My research interests lie in <strong>Brain-Inspired Computing and Intelligence</strong>.
+    Inspired by the remarkable efficiency and intelligence of biological brains, I aspire to
+    develop AI systems that are not only computationally efficient but also capable of more
+    flexible and adaptive intelligence.
+  </p>
+  <p>
+    My previous research has focused on <strong>Spiking Neural Networks (SNNs)</strong>, where
+    I explore novel neuron models and neural architectures to enhance their computational and
+    representational capabilities.
+  </p>
+  <p>
+    More recently, I have been extending my interests toward <strong>Embodied Intelligence</strong>,
+    exploring how principles of biological intelligence can inspire new approaches to artificial
+    intelligence.
+  </p>
+  <p>
+    I am still exploring the research questions I wish to pursue in the long term, and I would
+    be delighted to connect with researchers who share these interests and can offer guidance,
+    mentorship, or opportunities for collaboration.
+  </p>
 </div>
 
 ## Selected Publications
@@ -74,17 +66,16 @@ Please feel free to contact me via email: hub24@m.fudan.edu.cn.
 
 ## Current Research
 
-**Long-Horizon Memory for Embodied Agents.** An agent interacting with the world
-over an extended period accumulates far more observation than it can store, and
-most of that observation is irrelevant to any future decision. I am interested in
-how such an agent should decide which moments to keep, how those moments should be
-represented so that they stay useful rather than merely present, and how the right
-memory is retrieved when a decision depends on it. Concretely, this covers
-keyframe detection and selection, event-aware memory representations, long-horizon
-visual memory, memory retrieval and utilization, and memory organizations that stay
-within a realistic budget.
+### Event-Lifecycle Memory for Long-Horizon Embodied Intelligence
 
-<p class="research-note">
-  This work is in progress. Results, papers, and systems will be listed here and on
-  the <a href="/publications/">publications page</a> as they become available.
-</p>
+Long-horizon embodied tasks often require agents to make decisions based on past
+interactions, even when critical information is no longer visible in the current
+observation. I am exploring **event-lifecycle memory**, with a focus on how
+embodied agents can identify, preserve, and utilize task-relevant information
+throughout extended interactions. Rather than treating historical observations
+as isolated snapshots, I am interested in understanding how meaningful events
+unfold over time and how their associated evidence can support future decisions.
+My goal is to develop efficient and adaptive memory mechanisms that enable more
+reliable long-horizon embodied intelligence.
+
+{% include figure.liquid path="/assets/img/event_memory.jpg" class="img-fluid rounded z-depth-1" zoomable=true alt="Conceptual illustration of event-lifecycle memory for long-horizon embodied intelligence" %}
