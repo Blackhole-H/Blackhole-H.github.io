@@ -131,11 +131,19 @@
   /* Circular profile avatar: crop the (non-square) photo to a clean
      circle focused on the upper part of the frame, at a tidy size. */
   .profile img.rounded-circle {
-    width: 230px;
+    width: 320px;
     max-width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center 28%;
+  }
+  @media (max-width: 767px) {
+    .profile img.rounded-circle {
+      width: 220px;
+      float: none;
+      margin: 0 auto 1rem;
+      display: block;
+    }
   }
 
   /* Dark-mode tweak for the standalone research card. */
