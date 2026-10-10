@@ -54,10 +54,10 @@ Venue / Status 字段留空，且这些信息无法从公开页面核实，所�
 | 论文 PDF | 未提供 → 不显示 PDF 按钮 | 放到 `assets/pdf/`，bib 里加 `pdf = {xxx.pdf}` |
 | 代码仓库 | 未提供 → 不显示 Code 按钮 | bib 里加 `code = {https://github.com/...}` |
 | 项目主页 | 未提供 → 不显示 Project 按钮 | bib 里加 `website = {https://...}` |
-| 真实方法图 | 未提供 → 使用排版占位卡片（SVG） | 见 `MAINTENANCE.md` 第 3 节 |
+| 真实方法图 | ✅ 已上线（你上传的 3 张 PDF 框架图已渲染为 PNG 替换占位卡片） | 如需换图，替换 `assets/img/publication_preview/` 下同名 PNG |
 
-> 三条占位缩略图是**纯排版卡片**（论文名 + 一行说明 + 抽象脉冲图形），
-> 不含任何真实实验数据或论文插图，避免未经授权使用他人图片。
+> ~~三条占位缩略图~~ 已于 2026-10-10 全部替换为真实论文方法图
+> （来源：仓库 `assets/img/publication_preview/*.pdf`，160 dpi 渲染）。
 
 ---
 
@@ -70,7 +70,7 @@ Venue / Status 字段留空，且这些信息无法从公开页面核实，所�
 | GitHub | ✅ 已上线 `Blackhole-H` | — |
 | ORCID | ✅ 已上线 `0009-0005-4274-7588` | — |
 | **Google Scholar** | ❌ 未提供 ID → 不显示 Scholar 按钮 | 把 Scholar 主页 URL 里 `user=XXXXXXXXXXX` 的值填进 `_data/socials.yml` 的 `scholar_userid` |
-| **头像照片** | ⚠️ 使用中性「BH」字母占位图 | 替换 `assets/img/prof_pic.jpg`（1:1 或 4:5，短边 ≥ 600px） |
+| **头像照片** | ✅ 已上线（你上传的真实照片，1278×1706） | 如需更换，替换 `assets/img/prof_pic.jpg` |
 | 办公室地址 / 通讯地址 | ❌ 未提供 → 首页头像下不显示 | `_pages/about.md` 的 `profile.more_info` |
 | LinkedIn / X 等 | ❌ 未提供 → 不显示 | `_data/socials.yml` |
 
