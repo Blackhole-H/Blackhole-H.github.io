@@ -77,8 +77,6 @@ Please feel free to contact me via email: hub24@m.fudan.edu.cn.
 
 ## Current Research
 
-### Event-Lifecycle Memory for Long-Horizon Embodied Intelligence
-
 <div class="current-research-feature">
   <div class="current-research-copy">
     <p>I am exploring <strong>event-lifecycle memory</strong> for long-horizon embodied
