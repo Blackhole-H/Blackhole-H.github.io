@@ -9,12 +9,12 @@
   - the site owner's name is rendered bold (<strong>) instead of italic
   - all link buttons (Abs / DOI / arXiv / Bib / PDF / ...) are removed;
     the title itself links to arXiv (or DOI as fallback)
-  - preview thumbnails are wider (col-sm-3, sized for 300px)
+  - preview thumbnails use a wider media column and preserve the full figure
 {% endcomment %}
 
 <div class="row">
   {% if site.enable_publication_thumbnails %}
-    <div class="col col-sm-3 abbr">
+    <div class="col col-sm-4 abbr publication-media">
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}
           {% assign venue_style = null %}
@@ -54,11 +54,11 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-7{% else %}col-sm-10{% endif %}">
+  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8 publication-details{% else %}col-sm-10{% endif %}">
     <!-- Title (linked) -->
     <div class="title">
       {%- if entry.arxiv -%}
-        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank" rel="noopener">{{ entry.title }}</a>
+        <a href="https://arxiv.org/abs/{{ entry.arxiv }}" target="_blank" rel="noopener">{{ entry.title }}</a>
       {%- elsif entry.doi -%}
         <a href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">{{ entry.title }}</a>
       {%- else -%}
