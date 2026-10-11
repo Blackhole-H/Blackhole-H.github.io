@@ -33,12 +33,12 @@
   footer.fixed-bottom {
     border-top: 1px solid #e5e4de;
   }
-  html[data-theme=dark] {
+  html[data-theme="dark"] {
     --global-footer-bg-color: #1c1c1d;
     --global-footer-text-color: #828282;
     --global-footer-link-color: #a8c0e0;
   }
-  html[data-theme=dark] footer.fixed-bottom {
+  html[data-theme="dark"] footer.fixed-bottom {
     border-top: 1px solid #424246;
   }
 
@@ -52,12 +52,17 @@
     .research-grid {
       grid-template-columns: 1fr 1fr;
     }
+    .research-grid-home {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   .research-card {
     background: #faf9f7;
     border: 1px solid #e5e4de;
     border-radius: 6px;
     padding: 1.5rem 1.6rem 1.6rem;
+    height: 100%;
+    box-sizing: border-box;
   }
   .research-card h3 {
     margin: 0 0 0.15rem;
@@ -121,11 +126,136 @@
     color: #2f6f7e;
   }
 
-  /* Publication preview thumbnails: the bib layout gives them a wider
-     column (col-sm-3, 300px); let the image fill that column. */
-  img.preview {
+  /* Publication previews: make the method figures legible without cropping them. */
+  .publications .bibliography > li {
+    margin-bottom: 2.2rem;
+  }
+  .publications .bibliography .row {
+    align-items: center;
+    row-gap: 1rem;
+  }
+  .publications .publication-media {
+    flex: 0 0 36%;
+    max-width: 36%;
+  }
+  .publications .publication-details {
+    flex: 0 0 64%;
+    max-width: 64%;
+    padding-left: 1.35rem;
+  }
+  .publications .publication-media figure {
+    margin: 0;
+    padding: 0;
+  }
+  .publications img.preview {
+    display: block;
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: #f4f7f7;
+    border: 1px solid #e5e4de;
+    box-sizing: border-box;
+  }
+
+  .intro-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 1.25rem 0 2.4rem;
+  }
+  .intro-contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid #d8d7d1;
+    border-radius: 999px;
+    color: #1b3a6b;
+    font-size: 0.88rem;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+      background-color 160ms ease,
+      border-color 160ms ease,
+      color 160ms ease;
+  }
+  .intro-contact-link:hover,
+  .intro-contact-link:focus-visible {
+    background: #eef4f4;
+    border-color: #2f6f7e;
+    color: #1b3a6b;
+    text-decoration: none;
+  }
+  .intro-contact-primary {
+    background: #1b3a6b;
+    border-color: #1b3a6b;
+    color: #fff;
+  }
+  .intro-contact-primary:hover,
+  .intro-contact-primary:focus-visible {
+    background: #2f6f7e;
+    border-color: #2f6f7e;
+    color: #fff;
+  }
+
+  .current-research-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.75rem;
+    align-items: center;
+    margin: 1rem 0 2rem;
+  }
+  @media (min-width: 768px) {
+    .current-research-feature {
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+      gap: 2rem;
+    }
+  }
+  .current-research-copy p:last-child {
+    margin-bottom: 0;
+  }
+  .current-research-media {
+    width: 100%;
+    max-width: 520px;
+    justify-self: end;
+  }
+  .current-research-media figure {
+    margin: 0;
+  }
+  .current-research-media img.current-research-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 310px;
+    object-fit: contain;
+    background: #f4f7f7;
+    border: 1px solid #e5e4de;
+    box-sizing: border-box;
+  }
+  .figure-caption {
+    margin: 0.65rem 0 0;
+    color: #6b7178;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 767px) {
+    .publications .publication-media,
+    .publications .publication-details {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .publications .publication-details {
+      padding-left: 0;
+    }
+    .publications img.preview {
+      max-height: 220px;
+    }
+    .current-research-media {
+      max-width: none;
+      justify-self: stretch;
+    }
   }
 
   /* Circular profile avatar: crop the (non-square) photo to a clean
@@ -147,12 +277,40 @@
   }
 
   /* Dark-mode tweak for the standalone research card. */
-  html[data-theme=dark] .research-card {
+  html[data-theme="dark"] .research-card {
     background: #1c1c1d;
     border-color: #424246;
   }
-  html[data-theme=dark] .research-card p {
+  html[data-theme="dark"] .research-card p {
     color: #b6b9bd;
+  }
+  html[data-theme="dark"] .research-card ul {
+    color: #b6b9bd;
+  }
+  html[data-theme="dark"] .intro-contact-link {
+    border-color: #424246;
+    color: #a8c0e0;
+  }
+  html[data-theme="dark"] .intro-contact-link:hover,
+  html[data-theme="dark"] .intro-contact-link:focus-visible {
+    background: #262c34;
+    border-color: #6da2ae;
+    color: #d9e6f5;
+  }
+  html[data-theme="dark"] .intro-contact-primary,
+  html[data-theme="dark"] .intro-contact-primary:hover,
+  html[data-theme="dark"] .intro-contact-primary:focus-visible {
+    background: #345b8f;
+    border-color: #345b8f;
+    color: #fff;
+  }
+  html[data-theme="dark"] .publications img.preview,
+  html[data-theme="dark"] .current-research-media img.current-research-image {
+    background: #232629;
+    border-color: #424246;
+  }
+  html[data-theme="dark"] .figure-caption {
+    color: #9da4ac;
   }
 </style> <p>My work follows a loose trajectory: efficient neural computation, then the representations that make that computation worthwhile, then the memory and behavior such representations can support. The two areas below describe where I currently spend most of my time.</p> <h2 id="research-area-1--brain-inspired-computing">Research Area 1 — Brain-Inspired Computing</h2> <p>Dense neural computation is expensive, and much of that expense is spent communicating values that carry little information. Spiking neural networks offer a different accounting: units exchange sparse, discrete events, and synaptic integration reduces largely to accumulation. That makes them a natural place to ask how much computation a task actually requires.</p> <p>My work in this area is less about scaling spiking models up than about understanding what they are good at, and about keeping them efficient — in the number of timesteps, the amount of cross-channel communication, and the precision of the values they carry.</p> <h3 id="representative-work">Representative work</h3> <p><strong>SpikeLite: Lightweight Spiking Neural Networks for Time-Series Forecasting</strong><br> Bang Hu, Changze Lv, Mingjie Li, Xiaoqing Zheng, Wei Cao, Fan Zhang.<br> Built around a frequency-selective spiking encoder and a sparse spiking channel attention module, with a lighter channel-independent path for cases where explicit channel interaction is not needed.<br> <a href="https://arxiv.org/abs/2609.35097" rel="external nofollow noopener" target="_blank">arXiv:2609.35097</a></p> <p><strong>QuantaSpike: Short-Window Spike-Driven Quantization for Large Language Models</strong><br> Bang Hu, Guowei Zhu, Changze Lv, Xiaoqing Zheng, Fengzhe Zhang, Fan Zhang, Wei Cao.<br> Applies spike-driven computation to quantized LLMs through logarithmic ternary integrate-and-fire neurons, group-adaptive gain, and selective outlier admission, under a short firing window.<br> <a href="https://arxiv.org/abs/2609.34259" rel="external nofollow noopener" target="_blank">arXiv:2609.34259</a></p> <p><strong>SpikeSTAG: Spatial-Temporal Forecasting via GNN-SNN Collaboration</strong><br> Bang Hu, Changze Lv, Mingjie Li, Yunpeng Liu, Xiaoqing Zheng, Fengzhe Zhang, Wei Cao, Fan Zhang.<br> Integrates graph structural learning with spike-based temporal processing for multivariate time-series forecasting, without requiring a predefined graph.<br> <a href="https://arxiv.org/abs/2508.02069" rel="external nofollow noopener" target="_blank">arXiv:2508.02069</a></p> <h2 id="research-area-2--embodied-intelligence">Research Area 2 — Embodied Intelligence</h2> <h3 id="a-long-horizon-memory-for-embodied-agents">A. Long-Horizon Memory for Embodied Agents</h3> <p>An embodied agent operating over a long horizon observes far more than it can keep. Storage is not the only constraint: retaining everything makes retrieval harder, and most of what is retained will never matter again. The interesting problem is therefore selection — deciding what deserves to be remembered — together with the representation that lets a remembered moment stay useful.</p> <p>Questions I am working on:</p> <ul class="research-questions"> <li>What makes a frame informative for future decisions?</li> <li>How can important events be identified over long horizons?</li> <li>How should an agent retrieve relevant visual memories, and what representation makes retrieval reliable?</li> <li>How can memory be organized so that the cost of keeping it stays bounded as the horizon grows?</li> </ul> <p>This covers keyframe detection and selection, event-aware memory representations, long-horizon visual memory, and memory retrieval and utilization.</p> <h3 id="b-biological-inspiration-from-the-drosophila-brain">B. Biological Inspiration from the <em>Drosophila</em> Brain</h3> <p>Biological nervous systems solve perception, memory, and action under constraints that no engineered system currently respects: very few neurons, very little energy, and no separation between remembering and acting. The <em>Drosophila</em> brain, whose circuitry is increasingly well mapped, is a useful scale at which to read those solutions off directly.</p> <p>I am interested in what such circuits suggest for embodied intelligence — how sensorimotor processing is organized, how memory and action are coupled, and which of these principles transfer into models.</p> <p class="research-note"> This is an exploratory interest rather than a completed line of work. I have no results, papers, or systems on biological circuit reconstruction to report yet. </p> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Bang Hu. Built with <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a>. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
