@@ -26,10 +26,6 @@ latest_posts:
 I am a Ph.D. student at the College of Computer Science and Artificial
 Intelligence, Fudan University.
 
-I have led first-author research on efficient spiking neural networks —
-SpikeSTAG, SpikeLite, and QuantaSpike — with preprints available on arXiv
-(see [Publications](/publications/)).
-
 Please feel free to contact me via email: hub24@m.fudan.edu.cn.
 
 <div class="intro-contact" aria-label="Contact and profile links">
@@ -49,34 +45,28 @@ Please feel free to contact me via email: hub24@m.fudan.edu.cn.
 
 ## Research Interests
 
-<div class="research-grid research-grid-home">
-  <article class="research-card">
-    <h3>Brain-Inspired Computing</h3>
-    <span class="research-card-rule" aria-hidden="true"></span>
-    <p>Building efficient and adaptive AI systems from principles of biological computation.</p>
-    <ul>
-      <li>Efficient neural computation</li>
-      <li>Adaptive intelligence</li>
-    </ul>
-  </article>
-  <article class="research-card">
-    <h3>Spiking Neural Networks</h3>
-    <span class="research-card-rule" aria-hidden="true"></span>
-    <p>Exploring spike-based neurons and architectures for temporal data and language models.</p>
-    <ul>
-      <li>Time-series forecasting</li>
-      <li>Spike-driven quantization</li>
-    </ul>
-  </article>
-  <article class="research-card">
-    <h3>Embodied Intelligence</h3>
-    <span class="research-card-rule" aria-hidden="true"></span>
-    <p>Studying how memory and biological inspiration can support reliable long-horizon agents.</p>
-    <ul>
-      <li>Event-lifecycle memory</li>
-      <li>Long-horizon interaction</li>
-    </ul>
-  </article>
+<div class="research-card">
+  <p>
+    My research interests lie in <strong>Brain-Inspired Computing and Intelligence</strong>.
+    Inspired by the remarkable efficiency and intelligence of biological brains, I aspire to
+    develop AI systems that are not only computationally efficient but also capable of more
+    flexible and adaptive intelligence.
+  </p>
+  <p>
+    My previous research has focused on <strong>Spiking Neural Networks (SNNs)</strong>, where
+    I explore novel neuron models and neural architectures to enhance their computational and
+    representational capabilities.
+  </p>
+  <p>
+    More recently, I have been extending my interests toward <strong>Embodied Intelligence</strong>,
+    exploring how principles of biological intelligence can inspire new approaches to artificial
+    intelligence.
+  </p>
+  <p>
+    I am still exploring the research questions I wish to pursue in the long term, and I would
+    be delighted to connect with researchers who share these interests and can offer guidance,
+    mentorship, or opportunities for collaboration.
+  </p>
 </div>
 
 ## Selected Publications
@@ -91,15 +81,9 @@ Please feel free to contact me via email: hub24@m.fudan.edu.cn.
 
 <div class="current-research-feature">
   <div class="current-research-copy">
-    <p>Long-horizon embodied tasks often require agents to make decisions based on past
-    interactions, even when critical information is no longer visible in the current
-    observation. I am exploring <strong>event-lifecycle memory</strong>, with a focus on how
-    embodied agents can identify, preserve, and utilize task-relevant information
-    throughout extended interactions.</p>
-    <p>Rather than treating historical observations as isolated snapshots, I am interested in
-    understanding how meaningful events unfold over time and how their associated evidence
-    can support future decisions. My goal is to develop efficient and adaptive memory
-    mechanisms that enable more reliable long-horizon embodied intelligence.</p>
+    <p>I am exploring <strong>event-lifecycle memory</strong> for long-horizon embodied
+    intelligence: how agents can identify, preserve, and retrieve task-relevant evidence
+    after it is no longer visible in the current observation.</p>
   </div>
   <div class="current-research-media">
     {% include figure.liquid path="/assets/img/event_memory.jpg" class="current-research-image rounded z-depth-1" zoomable=true alt="Conceptual illustration of event-lifecycle memory for long-horizon embodied intelligence" %}

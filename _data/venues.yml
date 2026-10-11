@@ -5,3 +5,7 @@
 "arXiv":
   url: https://arxiv.org/
   color: "#1b3a6b"
+
+"NeurIPS 2026":
+  url: https://neurips.cc/Conferences/2026
+  color: "#2f6f7e"

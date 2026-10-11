@@ -43,10 +43,11 @@ integrate-and-fire neurons, group-adaptive gain, and selective outlier admission
 under a short firing window.<br>
 <a href="https://arxiv.org/abs/2609.34259">arXiv:2609.34259</a></p>
 
-<p><strong>SpikeSTAG: Spatial-Temporal Forecasting via GNN-SNN Collaboration</strong><br>
+<p><strong>SpikeSTAG: A Dendritic Compartmental Spiking Graph Network for Multivariate Time-Series Forecasting</strong><br>
 Bang Hu, Changze Lv, Mingjie Li, Yunpeng Liu, Xiaoqing Zheng, Fengzhe Zhang, Wei Cao, Fan Zhang.<br>
 Integrates graph structural learning with spike-based temporal processing for
 multivariate time-series forecasting, without requiring a predefined graph.<br>
+Accepted at NeurIPS 2026.<br>
 <a href="https://arxiv.org/abs/2508.02069">arXiv:2508.02069</a></p>
 
 ## Research Area 2 — Embodied Intelligence

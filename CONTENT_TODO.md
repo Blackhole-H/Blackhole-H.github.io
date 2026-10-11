@@ -12,7 +12,7 @@
 
 | 论文 | arXiv | 核验结果 |
 | --- | --- | --- |
-| SpikeSTAG: Spatial-Temporal Forecasting via GNN-SNN Collaboration | 2508.02069 | 2025-08-04 提交（v2: 2025-08-18） |
+| SpikeSTAG: A Dendritic Compartmental Spiking Graph Network for Multivariate Time-Series Forecasting | 2508.02069 | Accepted at NeurIPS 2026 |
 | QuantaSpike: Short-Window Spike-Driven Quantization for Large Language Models | 2609.34259 | 2026-09-28 提交 |
 | SpikeLite: Lightweight Spiking Neural Networks for Time-Series Forecasting | 2609.35097 | 2026-09-28 提交 |
 
