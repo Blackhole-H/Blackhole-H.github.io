@@ -2,9 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: >-
-  PhD Student, College of Computer Science and Artificial Intelligence, Fudan University
-  <br>Brain-Inspired Computing &amp; Embodied Intelligence
 
 profile:
   align: right
