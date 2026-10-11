@@ -12,7 +12,7 @@ profile:
   image_circular: true # crops the image to a circle
 
 selected_papers: false # the publication list below is rendered inline, so it can sit between the sections
-social: true # includes social icons at the bottom of the page
+social: false # contact links are shown beside the introduction instead
 
 announcements:
   enabled: false # enable once there is real news to report (see _news/)
@@ -23,8 +23,13 @@ latest_posts:
 
 {% include site-extras.html %}
 
-I am a Ph.D. student at the College of Computer Science and Artificial
-Intelligence, Fudan University.
+I am a Ph.D. student at the College of Computer Science and Artificial Intelligence, Fudan
+University. My research interests lie in <strong>Brain-Inspired Computing and Intelligence</strong>,
+with a focus on <strong>Spiking Neural Networks</strong> and <strong>Embodied Intelligence</strong>.
+
+I am still exploring the research questions I wish to pursue in the long term, and I would be
+delighted to connect with researchers who share these interests and can offer guidance,
+mentorship, or opportunities for collaboration.
 
 Please feel free to contact me via email: hub24@m.fudan.edu.cn.
 
@@ -61,11 +66,6 @@ Please feel free to contact me via email: hub24@m.fudan.edu.cn.
     More recently, I have been extending my interests toward <strong>Embodied Intelligence</strong>,
     exploring how principles of biological intelligence can inspire new approaches to artificial
     intelligence.
-  </p>
-  <p>
-    I am still exploring the research questions I wish to pursue in the long term, and I would
-    be delighted to connect with researchers who share these interests and can offer guidance,
-    mentorship, or opportunities for collaboration.
   </p>
 </div>
 
