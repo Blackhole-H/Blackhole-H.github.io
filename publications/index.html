@@ -42,6 +42,18 @@
     border-top: 1px solid #424246;
   }
 
+  /* The homepage is intentionally a focused single-page profile without the
+     template navigation or generated footer. */
+  body > header,
+  footer.fixed-bottom {
+    display: none !important;
+  }
+  body.fixed-top-nav,
+  body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
   .research-card {
     background: #faf9f7;
     border: 1px solid #e5e4de;
