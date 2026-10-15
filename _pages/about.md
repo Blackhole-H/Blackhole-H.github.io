@@ -85,3 +85,16 @@ Please feel free to contact me via email: hub24@m.fudan.edu.cn.
     <p class="figure-caption">An event-lifecycle memory preserves task-relevant evidence across interaction.</p>
   </div>
 </div>
+
+<div class="current-research-feature">
+  <div class="current-research-copy">
+    <p>I am exploring how neural circuits mapped in
+    <a href="https://www.janelia.org/project-team/flyem/male-cns-connectome" target="_blank" rel="noopener">MaleCNS</a>
+    support agile flight, and whether their sensorimotor computations can help quadruped
+    robots learn rapid turning, obstacle avoidance, and recovery.</p>
+  </div>
+  <div class="current-research-media">
+    {% include figure.liquid path="/assets/img/malecns_quadruped.png" class="current-research-image rounded z-depth-1" zoomable=true alt="Conceptual research pipeline from MaleCNS flight-related circuits through fly-body simulation to quadruped learning for turning, obstacle avoidance, and recovery" %}
+    <p class="figure-caption">Exploring sensorimotor computation from fly neural circuits to quadruped learning.</p>
+  </div>
+</div>
