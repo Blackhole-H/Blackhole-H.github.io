@@ -66,12 +66,6 @@ Please feel free to contact me via email: hub24@m.fudan.edu.cn.
   </p>
 </div>
 
-## Selected Publications
-
-<div class="publications">
-{% bibliography --group_by none --query @*[selected=true]* %}
-</div>
-
 ## Current Research
 
 <div class="current-research-feature">
@@ -98,3 +92,7 @@ Please feel free to contact me via email: hub24@m.fudan.edu.cn.
     <p class="figure-caption">Exploring sensorimotor computation from fly neural circuits to quadruped learning.</p>
   </div>
 </div>
+
+## Selected Publications
+
+{% include publication-groups.liquid selected_only=true %}

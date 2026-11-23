@@ -1,0 +1,19 @@
+{% assign publication_areas = 'Spiking Neural Networks,Embodied Intelligence' | split: ',' %}
+<div class="publications">
+  {% for publication_area in publication_areas %}
+    {% assign area_slug = publication_area | slugify %}
+    {% assign publication_query = '@*[research_area=' | append: area_slug %}
+    {% if include.selected_only %}
+      {% assign publication_query = publication_query | append: '&&selected=true' %}
+    {% endif %}
+    {% assign publication_query = publication_query | append: ']' %}
+    {% capture publication_count %}{% bibliography_count --group_by none --query {{ publication_query }} %}{% endcapture %}
+    <h3>{{ publication_area }}</h3>
+    {% assign publication_count = publication_count | strip %}
+    {% if publication_count == '0' %}
+      <p>No publications listed yet.</p>
+    {% else %}
+      {% bibliography --group_by none --query {{ publication_query }} %}
+    {% endif %}
+  {% endfor %}
+</div>
