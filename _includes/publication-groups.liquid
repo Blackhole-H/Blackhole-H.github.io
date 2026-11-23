@@ -6,14 +6,22 @@
     {% if include.selected_only %}
       {% assign publication_query = publication_query | append: '&&selected=true' %}
     {% endif %}
-    {% assign publication_query = publication_query | append: ']' %}
-    {% capture publication_count %}{% bibliography_count --group_by none --query {{ publication_query }} %}{% endcapture %}
     <h3>{{ publication_area }}</h3>
-    {% assign publication_count = publication_count | strip %}
-    {% if publication_count == '0' %}
+    {% assign accepted_query = publication_query | append: '&&publication_status=accepted]' %}
+    {% assign arxiv_query = publication_query | append: '&&publication_status=arxiv]' %}
+    {% capture accepted_count %}{% bibliography_count --group_by none --query {{ accepted_query }} %}{% endcapture %}
+    {% capture arxiv_count %}{% bibliography_count --group_by none --query {{ arxiv_query }} %}{% endcapture %}
+    {% assign accepted_count = accepted_count | strip %}
+    {% assign arxiv_count = arxiv_count | strip %}
+    {% if accepted_count == '0' and arxiv_count == '0' %}
       <p>No publications listed yet.</p>
     {% else %}
-      {% bibliography --group_by none --query {{ publication_query }} %}
+      {% if accepted_count != '0' %}
+        {% bibliography --group_by none --query {{ accepted_query }} %}
+      {% endif %}
+      {% if arxiv_count != '0' %}
+        {% bibliography --group_by none --query {{ arxiv_query }} %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 </div>
